@@ -24,7 +24,7 @@ function App() {
     navigator.geolocation.getCurrentPosition(
       async ({ coords }) => {
         const info = await fetch(
-          `http://api.weatherapi.com/v1/current.json?key=c189b30964774edbae3212811240406&q=${coords.latitude},${coords.longitude}&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=c189b30964774edbae3212811240406&q=${coords.latitude},${coords.longitude}&aqi=no`
         ).then((res) => res.json());
         setIsAvailable(true);
         setInfoWeather(info);
